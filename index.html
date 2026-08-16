@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cine Concordia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+  </head>
+  <body>
+    <!-- ===== HOME VIEW ===== -->
+    <div id="view-home">
+      <header class="site-header">
+        <div class="logo">CINE<span class="accent">CONCORDIA</span></div>
+        <nav class="main-nav">
+          <a href="#cartelera">Cartelera</a>
+          <a href="#proximamente">Próximamente</a>
+          <a href="#promociones">Promociones</a>
+          <a href="#informacion">Información</a>
+        </nav>
+        <a href="#cartelera" class="btn btn-primary">Comprar entradas</a>
+      </header>
+
+      <section class="hero">
+        <div
+          class="hero-media"
+          id="hero-backdrop-slot"
+          style="
+            background-image: url(&quot;img/spidermanbackdrop.jpg&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="hero-scrim-v"></div>
+        <div class="hero-scrim-h"></div>
+        <div class="hero-content">
+          <div class="eyebrow">En cartelera ahora</div>
+          <h1 class="hero-title">Spider-Man: Un Nuevo Día</h1>
+          <div class="meta-row">
+            <span>Acción</span><span class="dot">·</span><span>Aventura</span
+            ><span class="dot">·</span><span>130 min</span
+            ><span class="dot">·</span>
+            <span class="tag tag-outline">ATP</span>
+            <span class="tag">2D</span><span class="tag">3D</span
+            ><span class="tag">ATMOS</span> <span class="tag">Doblada</span
+            ><span class="tag">Subtitulada</span>
+          </div>
+          <p class="hero-synopsis">
+            A medida que las exigencias a las que se ve sometido Spider-Man se
+            intensifican, la presión desencadena una sorprendente evolución
+            física que pone en peligro su existencia. Al mismo tiempo, una nueva
+            y extraña ola de delitos da lugar a una de las amenazas más
+            poderosas a las que se ha enfrentado jamás.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" id="hero-buy-btn">
+              Comprar entradas
+            </button>
+            <a href="#movie-spiderman" class="btn-link">Ver en cartelera</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="cartelera" class="section">
+        <div class="section-head">
+          <h2>Cartelera</h2>
+          <div class="filters">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Buscar película..."
+            />
+            <select id="genre-select"></select>
+            <select id="format-select"></select>
+          </div>
+        </div>
+        <div id="movie-grid" class="movie-grid"></div>
+        <p id="no-results" class="no-results" hidden>
+          No encontramos películas con esos filtros.
+        </p>
+      </section>
+
+      <section id="proximamente" class="section">
+        <h2>Próximamente</h2>
+        <div id="coming-soon-grid" class="coming-soon-grid"></div>
+      </section>
+
+      <section id="promociones" class="section section-alt">
+        <h2>Promociones</h2>
+        <div id="promo-grid" class="promo-grid"></div>
+      </section>
+
+      <section id="informacion" class="section info-section">
+        <div class="info-text">
+          <h2>Información</h2>
+          <div class="info-list">
+            <div>
+              <span class="label">Ubicación</span>
+              <p>Pellegrini 550, Concordia, Entre Ríos</p>
+            </div>
+            <div>
+              <span class="label">Horario</span>
+              <p>Todos los días de 13:00 a 00:30 hs</p>
+            </div>
+            <div>
+              <span class="label">Contacto</span>
+              <p>(0345) 421-5566 · info@cineconcordia.com.ar</p>
+            </div>
+            <div>
+              <span class="label">Instalaciones</span>
+              <p>3 salas · Sonido Dolby · Confitería</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+        <iframe
+          class="info-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.5528185626727!2d-58.01976552353789!3d-31.398891674269716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade807c77aaaab%3A0xd8d82b7baa267a3a!2sCarlos%20Pellegrini%20550%2C%20E3200%20Concordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1786807507072!5m2!1ses-419!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </section>
+
+      <footer class="site-footer">
+        <div class="logo logo-sm">
+          CINE<span class="accent">CONCORDIA</span>
+        </div>
+        <p>© 2026 Cine Concordia. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <!-- ===== BOOKING VIEW ===== -->
+    <div id="view-booking" class="booking-shell" hidden>
+      <div class="booking-topbar">
+        <button id="btn-back" class="btn-back">‹ Volver</button>
+        <div id="progress-steps" class="progress-steps"></div>
+        <div class="topbar-spacer"></div>
+      </div>
+
+      <div class="booking-body">
+        <div class="booking-main">
+          <div id="step-seats" class="booking-step">
+            <h2>Elegí tus butacas</h2>
+            <p class="step-sub" id="seats-context"></p>
+            <div class="seat-legend">
+              <div><span class="swatch swatch-available"></span>Disponible</div>
+              <div>
+                <span class="swatch swatch-selected"></span>Seleccionada
+              </div>
+              <div><span class="swatch swatch-occupied"></span>Ocupada</div>
+            </div>
+            <div class="seat-map-wrap">
+              <div class="seat-map-inner">
+                <div class="screen-curve"></div>
+                <div class="screen-label">PANTALLA</div>
+                <div id="seat-rows" class="seat-rows"></div>
+              </div>
+            </div>
+            <div class="seat-summary">
+              <span id="seat-count-label">0 butaca(s) seleccionada(s)</span>
+              <span id="seat-list-label">—</span>
+            </div>
+          </div>
+
+          <div id="step-tickets" class="booking-step" hidden>
+            <h2>Tipo de entrada</h2>
+            <p class="step-sub">
+              Asigná un tipo de entrada a cada butaca seleccionada.
+            </p>
+            <div id="ticket-rows" class="ticket-rows"></div>
+          </div>
+
+          <div id="step-payment" class="booking-step" hidden>
+            <h2>Pago</h2>
+            <p class="step-sub">
+              Elegí cómo querés pagar. El cobro se procesa de forma segura.
+            </p>
+            <div id="payment-methods" class="payment-methods"></div>
+            <div id="card-form" class="card-form">
+              <label
+                >Número de tarjeta<input placeholder="0000 0000 0000 0000"
+              /></label>
+              <label
+                >Nombre del titular<input
+                  placeholder="Como figura en la tarjeta"
+              /></label>
+              <div class="card-form-row">
+                <label>Vencimiento<input placeholder="MM/AA" /></label>
+                <label>CVV<input placeholder="123" /></label>
+              </div>
+            </div>
+            <p id="mp-note" class="mp-note" hidden>
+              Vas a completar el pago en Mercado Pago al confirmar la compra. Te
+              vamos a redirigir de forma segura.
+            </p>
+            <div class="secure-note">
+              <span class="checkbox-icon"></span>Pago 100% seguro · Recibís tus
+              entradas por email al instante
+            </div>
+          </div>
+
+          <div
+            id="step-confirmation"
+            class="booking-step confirmation-step"
+            hidden
+          >
+            <div class="confirm-check">✓</div>
+            <h2>¡Compra confirmada!</h2>
+            <p>Te enviamos las entradas a tu email. Código de reserva:</p>
+            <div id="order-number" class="order-number"></div>
+            <button id="btn-reset" class="btn btn-primary btn-lg">
+              Volver al inicio
+            </button>
+          </div>
+
+          <div id="continue-wrap" class="continue-wrap">
+            <button id="btn-continue" class="btn btn-primary btn-lg" disabled>
+              Continuar
+            </button>
+          </div>
+        </div>
+
+        <aside id="booking-sidebar" class="booking-sidebar">
+          <div class="sidebar-movie">
+            <div
+              class="sidebar-poster cc-shimmer"
+              id="summary-poster-slot"
+            ></div>
+            <div>
+              <div id="summary-title" class="sidebar-title"></div>
+              <div id="summary-datetime" class="sidebar-sub"></div>
+              <div id="summary-sala" class="sidebar-sub2"></div>
+            </div>
+          </div>
+          <div class="sidebar-rows">
+            <div class="sidebar-row">
+              <span>Butacas</span>
+              <span class="sidebar-row-right"
+                ><span id="summary-seats"></span
+                ><a id="edit-seats-link" class="edit-link">Editar</a></span
+              >
+            </div>
+            <div class="sidebar-row">
+              <span>Entradas</span><span id="summary-count"></span>
+            </div>
+          </div>
+          <div id="sidebar-breakdown" class="sidebar-rows" hidden></div>
+          <div class="sidebar-total">
+            <span>Total</span>
+            <span id="summary-total" class="total-amount"></span>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
