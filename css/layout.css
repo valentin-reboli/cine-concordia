@@ -92,11 +92,11 @@
   color: var(--accent);
   font-weight: 700;
   font-size: 13px;
-  line-height: 2.2;
+  line-height: 1.4;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  padding: 8px 0;
+  margin-bottom: 8px;
+  padding: 0;
   display: inline-block;
 }
 
