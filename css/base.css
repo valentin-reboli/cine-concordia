@@ -1,4 +1,14 @@
 /* Design tokens & resets */
+@font-face {
+  font-family: 'Tan Meringue';
+  src:
+    url('../fonts/TanMeringue.woff2') format('woff2'),
+    url('../fonts/TanMeringue.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #0C0806;
   --surface: #18110D;
