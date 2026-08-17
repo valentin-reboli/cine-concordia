@@ -28,6 +28,10 @@
   font-size: 18px;
 }
 
+.site-header .logo {
+  font-family: 'Tan Meringue', var(--font-display);
+}
+
 .main-nav {
   display: flex;
   align-items: center;
